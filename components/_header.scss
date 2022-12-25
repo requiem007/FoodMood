@@ -1,0 +1,37 @@
+.header {
+  // .header__container
+  &__container {
+    display: flex;
+  }
+  // .header__logo
+  &__logo {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.5;
+    color: $mainColor;
+    text-transform: uppercase;
+  }
+  // .header__nav
+  &__nav {
+    display: flex;
+  }
+  // .header__btn
+  &__btn {
+  }
+}
+.navigation {
+  // .navigation__list
+  &__list {
+  }
+  // .navigation__item
+  &__item {
+  }
+  // .navigation__link
+  &__link {
+    color: inherit;
+  }
+}
+.button {
+  color: $whiteColor;
+  background-color: $yellowyBg;
+}
