@@ -1,9 +1,3 @@
-[class*="__container"] {
-  max-width: 1470px;
-  margin: 0 auto;
-  padding: 0 15px;
-  min-height: 100%;
-}
 .wrapper {
   min-height: 100%;
   display: flex;
@@ -18,9 +12,64 @@
     min-width: 0;
   }
 }
+// ==================================================================================================================================================
+
+[class*="__container"] {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+  min-height: 100%;
+}
+// ==================================================================================================================================================
+
+body {
+  &.lock {
+    overflow: hidden;
+  }
+}
+// ==================================================================================================================================================
+
+._ibg {
+  position: relative;
+}
+._ibg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+// ========================общий заголовок==========================================================================================================================
+
+// ==================================================================================================================================================
 
 @import "../components/variables.scss";
 @import "../components/cancel.scss";
-// @import "../components/mixins.scss";
+@import "../components/mixins.scss";
 
 @import "../components/header.scss";
+@import "../components/preview.scss";
+@import "../components/categories.scss";
+@import "../components/delivery.scss";
+@import "../components/outlets.scss";
+// ========================общий заголовок==========================================================================================================================
+
+.title {
+  // .title__label
+  .title__label {
+    font-size: 18px;
+    color: $yellowColor;
+    text-transform: uppercase;
+    @media (max-width: $mobile) {
+      font-size: 16px;
+    }
+  }
+  .sub__title {
+    font-size: 55px;
+    color: $mainColor;
+    @media (max-width: $mobile) {
+      font-size: 32px;
+    }
+  }
+}

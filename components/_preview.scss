@@ -1,0 +1,111 @@
+.page {
+  // .page__preview
+  &__preview {
+  }
+}
+.preview {
+  position: relative;
+  // .preview__container
+  &__container {
+    padding-top: 150px;
+    padding-bottom: 196px;
+    @media (max-width: $mobile) {
+      padding-top: 100px;
+      padding-bottom: 50px;
+    }
+  }
+
+  &__body {
+    position: relative;
+    z-index: 3;
+  }
+  // .preview__price
+  &__price {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.5;
+    color: $whiteColor;
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+  // .preview__title
+  &__title {
+    font-size: 64px;
+    color: $whiteColor;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 40px;
+    }
+  }
+  // .preview__content
+  &__content {
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      margin-bottom: 80px;
+    }
+    @media (max-width: $mobileSmall) {
+      flex-direction: column;
+    }
+  }
+  // .preview__discount
+  &__discount {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 205px;
+    height: 205px;
+    background-color: $yellowyBg;
+    border-radius: 50%;
+    color: $whiteColor;
+  }
+  .discount {
+    &__percent {
+      font-weight: 700;
+      font-size: 63.4px;
+      color: $whiteColor;
+    }
+    &__percent-text {
+      font-weight: 700;
+      font-size: 32px;
+      text-transform: uppercase;
+    }
+  }
+  // .preview__text
+  &__text {
+    font-size: 36px;
+    color: $whiteColor;
+    max-width: 324px;
+    @media (max-width: $mobile) {
+      font-size: 26px;
+    }
+  }
+  // .preview__button
+  &__button {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    color: $whiteColor;
+    background-color: $yellowyBg;
+    padding: 13px 46px;
+    border-radius: 4px;
+  }
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    img {
+      @media (max-width: $mobile) {
+        object-position: right;
+      }
+    }
+  }
+}

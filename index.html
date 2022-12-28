@@ -13,31 +13,181 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header__container">
-        <div class="header__logo">
-          <p>FoodMood</p>
+      <header class="header">
+        <div class="header__container">
+          <div class="header__icon">
+            <a class="header__logo" href="">FoodMood</a>
+          </div>
+          <nav class="header__nav navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a href="" class="navigation__link">HOME</a>
+              </li>
+              <li class="navigation__item">
+                <a href="" class="navigation__link">OUR MENU</a>
+              </li>
+              <li class="navigation__item">
+                <a href="" class="navigation__link">OFFER</a>
+              </li>
+              <li class="navigation__item">
+                <a href="" class="navigation__link">ABOUT</a>
+              </li>
+              <li class="navigation__item">
+                <a href="" class="navigation__link">ABOUT</a>
+              </li>
+            </ul>
+            <a href="" class="header__btn button">DOWNLOAD APP</a>
+            <button type="button" class="icon-menu"><span></span></button>
+          </nav>
         </div>
-        <nav class="header__nav navigation">
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <a href="" class="navigation__link">HOME</a>
-            </li>
-            <li class="navigation__item">
-              <a href="" class="navigation__link">OUR MENU</a>
-            </li>
-            <li class="navigation__item">
-              <a href="" class="navigation__link">OFFER</a>
-            </li>
-            <li class="navigation__item">
-              <a href="" class="navigation__link">ABOUT</a>
-            </li>
-            <li class="navigation__item">
-              <a href="" class="navigation__link">ABOUT</a>
-            </li>
-          </ul>
-          <a href="" class="header__btn button">DOWNLOAD APP</a>
-        </nav>
       </header>
+      <main>
+        <section class="page__preview preview">
+          <div class="preview__container">
+            <div class="preview__body">
+              <div class="preview__price">Only $15.00</div>
+              <h1 class="preview__title">AUTHENTIC ITALIAN PIZZA</h1>
+              <div class="preview__content">
+                <div class="preview__discount discount">
+                  <div class="discount__percent">20%</div>
+                  <div class="discount__percent-text">discount</div>
+                </div>
+                <div class="preview__text">
+                  On your first order, if you order online through our App!
+                </div>
+              </div>
+              <a href="" class="preview__button">ORDER ONLINE</a>
+            </div>
+          </div>
+          <div class="preview__image _ibg">
+            <img src="./assets/main-image.jpg" alt="cover" />
+          </div>
+        </section>
+        <section class="page__categories categories">
+          <div class="categories__container">
+            <div class="title categories__title">
+              <div class="title__label">TOP FOODS</div>
+              <h2 class="sub__title">Our Categories</h2>
+            </div>
+            <div class="categories__items">
+              <div class="categories__item">
+                <div class="categories__image _ibg">
+                  <img src="./assets/categories/pizza.png" alt="pizza" />
+                </div>
+                <div class="categories__sub-title">Pizza</div>
+                <div class="categories__text">20 Restaurants Foods</div>
+              </div>
+              <div class="categories__item active">
+                <div class="categories__image _ibg">
+                  <img src="./assets/categories/pasta.png" alt="pasta" />
+                </div>
+                <div class="categories__sub-title">Pasta</div>
+                <div class="categories__text">15 Restaurants Foods</div>
+              </div>
+              <div class="categories__item">
+                <div class="categories__image _ibg">
+                  <img src="./assets/categories/shakes.png" alt="shakes" />
+                </div>
+                <div class="categories__sub-title">Shakes</div>
+                <div class="categories__text">20 Restaurants Foods</div>
+              </div>
+              <div class="categories__item">
+                <div class="categories__image _ibg">
+                  <img src="./assets/categories/burger.png" alt="burger" />
+                </div>
+                <div class="categories__sub-title">Burger</div>
+                <div class="categories__text">25 Restaurants Foods</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__delivery delivery">
+          <div class="delivery__container">
+            <div class="delivery__items">
+              <div class="delivery__item">
+                <div class="delivery__icon">
+                  <img src="./assets/icons/delivery/bus.svg" alt="bus" />
+                </div>
+                <div class="delivery__title">Free Shipping on First Order</div>
+                <div class="delivery__text">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod
+                  </p>
+                </div>
+              </div>
+              <div class="delivery__item">
+                <div class="delivery__icon">
+                  <img src="./assets/icons/delivery/burger.svg" alt="burger" />
+                </div>
+                <div class="delivery__title">Variety of Dishes</div>
+                <div class="delivery__text">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod
+                  </p>
+                </div>
+              </div>
+              <div class="delivery__item">
+                <div class="delivery__icon">
+                  <img src="./assets/icons/delivery/time.svg" alt="time" />
+                </div>
+                <div class="delivery__title">Thirty Minutes Delivery</div>
+                <div class="delivery__text">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__outlets outlets">
+          <div class="outlets__container">
+            <div class="title outlets__title">
+              <div class="title__label">OUR OUTLETS</div>
+              <h2 class="sub__title">Find an Outlet Near You</h2>
+            </div>
+            <div class="outlets__items">
+              <div class="outlets__item">
+                <div class="outlets__image _ibg">
+                  <img src="./assets/outlets/01.jpg" alt="Fulton" />
+                </div>
+                <div class="outlets__icon">
+                  <img src="./assets/icons/outlets/01.svg" alt="map" />
+                </div>
+                <div class="outlets__address">
+                  <p>762 Fulton St San Francisco, California(CA), 94102</p>
+                </div>
+              </div>
+              <div class="outlets__item">
+                <div class="outlets__image _ibg">
+                  <img src="./assets/outlets/01.jpg" alt="Fulton" />
+                </div>
+                <div class="outlets__icon">
+                  <img src="./assets/icons/outlets/01.svg" alt="map" />
+                </div>
+                <div class="outlets__address">
+                  <p>66 Ceres St San Francisco, California(CA), 94124</p>
+                </div>
+              </div>
+              <div class="outlets__item">
+                <div class="outlets__image _ibg">
+                  <img src="./assets/outlets/03.jpg" alt="sutter" />
+                </div>
+                <div class="outlets__icon">
+                  <img src="./assets/icons/outlets/01.svg" alt="map" />
+                </div>
+                <div class="outlets__address">
+                  <p>766 Sutter St San Francisco, California(CA), 94109</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
+    <script src="./js/index.js"></script>
   </body>
 </html>

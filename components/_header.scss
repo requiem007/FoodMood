@@ -1,15 +1,31 @@
 .header {
+  position: absolute;
+  width: 100%;
   // .header__container
   &__container {
+    position: relative;
+    z-index: 10;
     display: flex;
+    align-items: center;
+    min-height: 115px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    justify-content: space-between;
+    @media (max-width: $mobile) {
+      min-height: 80px;
+    }
+  }
+  &__icon {
+    z-index: 2;
   }
   // .header__logo
   &__logo {
     font-weight: 700;
     font-size: 18px;
-    line-height: 1.5;
-    color: $mainColor;
+    color: $whiteColor;
     text-transform: uppercase;
+    margin-right: 10px;
+    z-index: 10;
   }
   // .header__nav
   &__nav {
@@ -17,21 +33,126 @@
   }
   // .header__btn
   &__btn {
+    padding: 13px 46px;
+    @media (max-width: $mobile) {
+      padding: 10px 15px;
+    }
   }
 }
 .navigation {
+  align-items: center;
+  @include adaptiveValue("gap", 55, 15, 1);
   // .navigation__list
   &__list {
+    display: flex;
+    @include adaptiveValue("column-gap", 44, 10, 1);
+    row-gap: 5px;
+    flex-wrap: wrap;
+    @media (max-width: $mobile) {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: #333333;
+      opacity: 0.9;
+      padding: 100px 30px;
+      flex-direction: column;
+      transition: all 0.3s ease 0s;
+      gap: 20px;
+      &.menu-open {
+        left: 0;
+      }
+    }
   }
   // .navigation__item
   &__item {
+    @media (max-width: $mobile) {
+      text-align: right;
+    }
   }
   // .navigation__link
   &__link {
-    color: inherit;
+    font-weight: 700;
+    font-size: 14px;
+    color: $whiteColor;
+    transition: all 0.3s ease 0s;
+    @media (max-width: $mobile) {
+      font-size: 22px;
+    }
+    &:hover {
+      color: $yellowColor;
+    }
   }
 }
 .button {
+  height: 48px;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
   color: $whiteColor;
   background-color: $yellowyBg;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.5;
+  transition: all 0.3s ease 0s;
+  @media (max-width: $mobileSmall) {
+    height: 40px;
+    padding: 15px 10px;
+    font-size: 10px;
+    z-index: 2;
+  }
+  &:hover {
+    background-color: #b59619;
+  }
+}
+//Burger
+.icon-menu {
+  background-color: inherit;
+  display: none;
+  @media (max-width: $mobile) {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    flex: 0 0 30px;
+    z-index: 5;
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 0.3s ease 0s;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: $whiteBg;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    span {
+      top: 50%;
+      transform: scale(1) translate(0, -50%);
+    }
+    &.menu-open {
+      span {
+        transform: scale(0) translate(0, -50%);
+      }
+      &::before {
+        top: 50%;
+        transform: rotate(-45deg);
+      }
+      &::after {
+        bottom: 50%;
+        transform: rotate(45deg);
+      }
+    }
+  }
 }
