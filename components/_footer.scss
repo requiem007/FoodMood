@@ -1,0 +1,136 @@
+.footer {
+  // .footer__container
+  &__container {
+    padding-top: 90px;
+    padding-bottom: 43px;
+    @media (max-width: $mobile) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+  &__body {
+    display: flex;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      row-gap: 30px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 200px;
+    }
+    @media (max-width: $mobile) {
+      &:not(:last-child) {
+        margin-bottom: 100px;
+      }
+    }
+    @media (max-width: $mobileSmall) {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  // .footer__info
+  &__info {
+    flex: 0 0 30%;
+    margin-right: 30px;
+  }
+  // .footer__items
+  &__items {
+    flex: 1 1 70%;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    @media (max-width: 600px) {
+      text-align: center;
+    }
+    @media (max-width: $mobileSmall) {
+      flex-direction: column;
+    }
+  }
+  // .footer__item
+  &__item {
+    flex: 1 1 33.333%;
+  }
+  // .footer__copy
+  &__copy {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 18px;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      row-gap: 10px;
+      text-align: center;
+    }
+  }
+  // .footer__copyright
+  &__copyright {
+  }
+  // .footer__powered
+  &__powered {
+  }
+}
+.info {
+  // .info__title
+  &__title {
+    font-size: 24px;
+    color: $yellowColor;
+    &:not(:last-child) {
+      margin-bottom: 47px;
+    }
+  }
+  // .info__text
+  &__text {
+    font-weight: 400;
+    &:not(:last-child) {
+      margin-bottom: 47px;
+    }
+  }
+  // .info__icons
+  &__icons {
+    display: flex;
+    gap: 48px;
+  }
+}
+.item-footer {
+  &.about {
+    flex: 1 1 20%;
+    @media (max-width: 600px) {
+      flex: 0 1 50%;
+    }
+  }
+  &.our__menu {
+    flex: 1 1 20%;
+    @media (max-width: 600px) {
+      flex: 0 1 50%;
+    }
+  }
+  &.our__location {
+    // flex: 1 1 20%;
+    // @media (max-width: 600px) {
+    //   flex: 0 1 50%;
+    // }
+  }
+  // .item-footer__title
+  &__title {
+    font-size: 24px;
+    &:not(:last-child) {
+      margin-bottom: 47px;
+    }
+    @media (max-width: $mobileSmall) {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  // .item-footer__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
+  // .item-footer__link
+  &__link {
+    color: inherit;
+    font-weight: 400;
+  }
+}

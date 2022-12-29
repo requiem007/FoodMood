@@ -8,3 +8,33 @@ if (burgerIcon) {
     menuBody.classList.toggle("menu-open");
   });
 }
+//плавная прокрустка по клику
+
+const menuLinks = document.querySelectorAll(".navigation__link[data-goto]"); //собрал в массив все ссылки с дата-атрибутов data-goto
+console.log(menuLinks);
+if (menuLinks.length > 0) {
+  menuLinks.forEach((menuLink) => {
+    menuLink.addEventListener("click", onMenuLinkClick);
+  });
+}
+function onMenuLinkClick(e) {
+  const menuLink = e.target;
+  if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+    const gotoBlock = document.querySelector(menuLink.dataset.goto);
+    const gotoBlockValue =
+      gotoBlock.getBoundingClientRect().top +
+      scrollY -
+      document.querySelector("header").offsetHeight;
+    if (burgerIcon.classList.contains("menu-open")) {
+      document.body.classList.remove("lock");
+      burgerIcon.classList.remove("menu-open");
+      menuBody.classList.remove("menu-open");
+    }
+
+    window.scrollTo({
+      top: gotoBlockValue,
+      behavior: "smooth",
+    });
+    e.preventDefault();
+  }
+}

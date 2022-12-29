@@ -1,0 +1,79 @@
+.app {
+  background: $gradientBg;
+  // .app__container
+  &__container {
+    padding-top: 65px;
+    padding-bottom: 135px;
+    @media (max-width: $mobile) {
+      padding-top: 35px;
+      padding-bottom: 45px;
+    }
+  }
+  // .app__content
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+  // .app__body
+  &__body {
+    flex: 1 1 50%;
+  }
+  // .app__title
+  &__title {
+    font-weight: 700;
+    font-size: 55px;
+    color: $whiteColor;
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 32px;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  // .app__text
+  &__text {
+    font-size: 26px;
+    color: $whiteColor;
+    &:not(:last-child) {
+      margin-bottom: 73px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 20px;
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  // .app__download
+  &__download {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    @media (max-width: $mobileSmall) {
+      justify-content: center;
+    }
+  }
+  // .app__google
+  &__google {
+  }
+  // .app__apple
+  &__apple {
+  }
+  // .app__image
+  &__image {
+    width: 100%;
+    padding-bottom: 50%;
+    flex: 1 1 50%;
+    @media (max-width: $mobile) {
+      flex: 1 1 100%;
+      padding-bottom: 100%;
+    }
+  }
+}

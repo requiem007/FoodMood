@@ -1,0 +1,23 @@
+.partners {
+  // .partners__container
+  &__container {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    @media (max-width: $mobile) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+  // .partners__items
+  &__items {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    @include adaptiveValue("column-gap", 30, 15, 1);
+    row-gap: 15px;
+  }
+  // .partners__item
+  &__item {
+    text-align: center;
+  }
+}
